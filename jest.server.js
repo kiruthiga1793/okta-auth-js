@@ -1,7 +1,13 @@
+var SDK_VERSION = require('./package.json').version;
+var USER_AGENT = 'okta-auth-js-server/' + SDK_VERSION;
 var OktaAuth = '<rootDir>/lib/server';
 
 module.exports = {
   'coverageDirectory': '<rootDir>/build2/reports/coverage',
+  'globals': {
+    SDK_VERSION,
+    USER_AGENT
+  },
   'restoreMocks': true,
   'moduleNameMapper': {
     '^@okta/okta-auth-js$': OktaAuth
