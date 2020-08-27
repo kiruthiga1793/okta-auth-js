@@ -38,6 +38,7 @@ waitOn({
   });
   server.on('exit', function(code) {
     console.log('Server exited with code: ' + code);
+    // eslint-disable-next-line no-process-exit
     process.exit(returnCode);
   });
 });
